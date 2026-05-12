@@ -1,9 +1,10 @@
 # Software
 
-Future desktop software and signal processing tools.
+Desktop software and signal processing tools.
 
-Planned:
-- ECG viewer
-- Digital filtering
-- Signal analysis
-- Machine learning
+Features:
+- real-time biosignal visualization
+- signal recording
+- DSP filtering
+- machine learning experiments
+- data analysis
