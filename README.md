@@ -1,219 +1,124 @@
-# ECG Lie Detector
+# Lie Detector Biosignal System
 
-## Overview
+Open-source biosignal acquisition and analysis platform based on:
 
-This project is an open-source ECG acquisition system built using:
+- ECG (Electrocardiography)
+- GSR (Galvanic Skin Response)
+- Respiratory monitoring
 
-* Analog electronics
-* STM32 microcontrollers
-* Custom signal filtering
-* Digital signal processing
-
-The goal is to design a fully custom ECG analog front-end and process the signal digitally on STM32.
-
-> Disclaimer:
-> This is NOT a medical device.
-> This project is for educational and research purposes only.
+The project combines custom analog electronics, embedded signal processing, STM32 firmware, desktop software, and 3D-printed hardware.
 
 ---
 
 # Features
 
-* 3-electrode ECG acquisition
-* Custom analog front-end
-* Instrumentation amplifier
-* Analog filtering
-* Digital 50 Hz notch filter
-* STM32 ADC acquisition
-* Open-source hardware and firmware
+- Custom ECG analog front-end
+- Galvanic Skin Response acquisition
+- Respiratory signal monitoring
+- STM32 real-time acquisition
+- Digital filtering and DSP
+- Real-time visualization software
+- Portable standalone device
+- 3D-printed enclosure
+- Open-source hardware and firmware
 
 ---
 
-# Signal Chain
+# Biosignals
 
-```text
-RA / LA / RL electrodes
-→ Input protection
-→ Instrumentation amplifier
-→ High-pass filter
-→ Gain stage
-→ Low-pass filter
-→ STM32 ADC
-→ Digital filtering
-```
+## ECG
 
----
+3-electrode ECG acquisition system using:
+- instrumentation amplifier
+- Sallen-Key filters
+- STM32 ADC acquisition
 
-# Hardware
+## GSR
 
-## Main Components
+Skin conductance measurement using:
+- constant current excitation
+- analog amplification
+- low-noise filtering
 
-* STM32
-* TLV271IP operational amplifiers
-* ECG electrodes
-* Passive filters
-* Battery power supply
+## Respiration
 
-Future versions may use:
-
-* INA826
-* AD620
-* OPA2188
-
----
-
-# Filters
-
-## Analog Filters
-
-### High-pass filter
-
-Used to remove:
-
-* DC offset
-* baseline drift
-
-Cutoff frequency:
-
-```text
-~0.5 Hz
-```
-
-### Low-pass filter
-
-Used to remove:
-
-* high-frequency noise
-* muscle noise
-
-Cutoff frequency:
-
-```text
-~40 Hz
-```
-
----
-
-# Digital Processing
-
-Digital filtering is performed directly on the STM32.
-
-## Implemented Filters
-
-* 50 Hz notch filter
-* Optional digital bandpass filter
-
----
-
-# Safety
-
-* Battery-powered only
-* No direct connection to mains power
-* Do NOT use while connected to a PC without isolation
-* NOT medically certified
+Respiratory monitoring using:
+- stretch sensor / belt sensor
+- analog filtering
+- breathing rate extraction
 
 ---
 
 # Repository Structure
 
 ```text
-ECG-Lie-Detector/
-│
-├── README.md
-├── docs/
-├── hardware/
-├── firmware/
-└── software/
+hardware/   → analog electronics and enclosure
+firmware/   → STM32 embedded code
+software/   → desktop software and DSP
+docs/       → documentation and theory
 ```
 
 ---
 
-# Hardware Folder
+# Safety Disclaimer
 
-Contains:
+This project is NOT a medical device.
 
-* schematics
-* BOM
-* tests
-* hardware documentation
+For educational and research purposes only.
 
----
-
-# Firmware Folder
-
-Contains STM32 code:
-
-* ADC acquisition
-* UART communication
-* filtering
-* DSP
-
----
-
-# Software Folder
-
-Contains:
-
-* ECG viewer
-* signal processing tools
-* GUI applications
-* future machine learning tools
-
----
-
-# License
-
-## Software / Firmware
-
-MIT License
-
-## Hardware
-
-CERN-OHL-S v2
+Never connect the device to mains-powered equipment without proper isolation.
 
 ---
 
 # Planned Features
 
-* Real-time ECG display
-* Bluetooth support
-* OLED/LCD display
-* 3D-printed enclosure
-* Portable standalone device
-* Signal recording
-* Heart-rate extraction
-* Improved filtering
-* Machine learning analysis
+- OLED/LCD display
+- Real-time waveform visualization
+- Data recording
+- Signal quality estimation
+- Machine learning analysis
+- Battery-powered standalone operation
 
 ---
 
-# Future Hardware
+# Hardware
 
-Future versions of the project may include:
+- STM32 Nucleo
+- TLV271IP operational amplifiers
+- Analog filtering
+- 3D-printed enclosure
 
-* LCD/OLED display
-* Buttons and user controls
-* Battery monitoring
-* Portable enclosure
-* Fully standalone operation
-* 3D-printed case
+---
 
-The project is designed to evolve into a complete portable biosignal acquisition platform.
+# Software
+
+- Real-time biosignal visualization
+- DSP filtering
+- Signal analysis
+- Data logging
+- Machine learning experiments
+
+---
+
+# Licenses
+
+## Software / Firmware
+MIT License
+
+## Hardware
+CERN-OHL-S v2
 
 ---
 
 # Contributing
 
-Contributions are welcome.
-
-Possible contributions:
-
-* analog electronics
-* STM32 firmware
-* DSP
-* filtering
-* documentation
-* testing
+Contributions are welcome:
+- analog electronics
+- embedded systems
+- DSP
+- software
+- mechanical design
+- documentation
 
 ---
 
