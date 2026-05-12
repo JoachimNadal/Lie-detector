@@ -1,0 +1,117 @@
+# =========================
+# OS FILES
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+# VSCODE
+# =========================
+
+.vscode/
+.history/
+
+# =========================
+# PYTHON
+# =========================
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+.env
+venv/
+.venv/
+
+# =========================
+# STM32 / EMBEDDED
+# =========================
+
+*.elf
+*.bin
+*.hex
+*.map
+
+Debug/
+Release/
+
+build/
+cmake-build-*/
+
+# STM32CubeIDE
+.settings/
+.project
+.cproject
+
+# =========================
+# KICAD
+# =========================
+
+*.kicad_prl
+*.kicad_pcb-bak
+*.bak
+*.tmp
+*-backups/
+
+# Cache
+_fp-info-cache
+.sym-lib-table
+fp-lib-table
+
+# =========================
+# FUSION 360 / CAD
+# =========================
+
+*.f3z~
+*.autosave
+
+# =========================
+# DATASETS / RECORDINGS
+# =========================
+
+*.csv
+*.wav
+*.raw
+
+# Uncomment if datasets become too large
+# datasets/
+
+# =========================
+# GENERATED FILES
+# =========================
+
+*.zip
+*.tar
+*.7z
+
+# =========================
+# QT / C++
+# =========================
+
+*.pro.user
+*.o
+*.obj
+*.exe
+
+# =========================
+# LOGS
+# =========================
+
+logs/
+*.log
+
+# =========================
+# JUPYTER
+# =========================
+
+.ipynb_checkpoints/
+
+# =========================
+# TEMP
+# =========================
+
+temp/
+tmp/
+```
